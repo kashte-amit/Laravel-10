@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,9 @@ Route::get('/about', [PageController::class, 'aboutPage'])->name('hello');
 Route::get('/contact', [PageController::class, 'contactPage']);
 
 Route::resource('/blog', BlogController::class);
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'loginHandler'])->name('login.submit');
 
 // Dynamic routes
 Route::get('/user/{id}', function($id){
