@@ -18,11 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function(){
-  return "<h1>About</h1>";
+  return view('pages.about');
 })->name('hello');
 
 Route::get('/contact', function(){
-  return "<h1>Contact</h1>";
+  return view('pages.contact');
 });
 
 // Dynamic routes
@@ -42,7 +42,7 @@ Route::get('/users', function(){
 // Route Grouping
 Route::group(['prefix'=>'customer'], function () {
   Route::get('/', function(){
-      return "<h1>Customer List</h1>";
+    return view('pages.customer.list');
   });
   
   Route::get('/create', function(){
