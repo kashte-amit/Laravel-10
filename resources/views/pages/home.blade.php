@@ -3,11 +3,7 @@
 @section('content')
 <main role="main" class="container">
   <h1 class="mt-5 text-danger">Home</h1>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum pariatur ratione quaerat vero a, ullam reiciendis
-  earum distinctio nihil exercitationem quidem neque odit aliquid quasi esse, repudiandae, adipisci non placeat.
-
-
-  <h2>With foreach loop</h2>
+  <p>  Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
 
   <div class="row mt-4 mb-2">
     
@@ -36,6 +32,29 @@
 
   </div>
 
+  @php
+      $name = 'Amit';
+  @endphp
+
+  @isset($name)
+    <div class="alert alert-success">{{ $name }}</div>
+  @endisset
+
+  @switch($type)
+      @case(1)
+          
+          @break
+      @case(2)
+          
+          @break
+      @default
+          
+  @endswitch
+
+  @empty($record)
+      
+  @endempty
+  
   {{-- <h2>With for loop</h2>
 
   <div class="row mt-4">

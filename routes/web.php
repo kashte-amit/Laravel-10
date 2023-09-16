@@ -21,27 +21,27 @@ Route::get('/home', function () {
   $blogs = [
     [
       'title' => 'title one',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
       'status' => 'A'
     ],
     [
       'title' => 'title two',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
       'status' => 'D'
     ],
     [
       'title' => 'title three',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
       'status' => 'A'
     ],
     [
       'title' => 'title four',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
       'status' => 'D'
     ],
     [
       'title' => 'title five',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
       'status' => 'A'
     ]
   ];
