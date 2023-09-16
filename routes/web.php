@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,55 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
-});
+// Route::get('/', function () {
+//   return view('welcome');
+// });
 
-Route::get('/home', function () {
-  $blogs = [
-    [
-      'title' => 'title one',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      'status' => 'A'
-    ],
-    [
-      'title' => 'title two',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      'status' => 'D'
-    ],
-    [
-      'title' => 'title three',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      'status' => 'A'
-    ],
-    [
-      'title' => 'title four',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      'status' => 'D'
-    ],
-    [
-      'title' => 'title five',
-      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-      'status' => 'A'
-    ]
-  ];
+Route::get('/home', [PageController::class, 'homePage']);
 
-  return view('pages.home', compact('blogs'));
-});
+Route::get('/about', [PageController::class, 'aboutPage'])->name('hello');
 
-Route::get('/about', function(){
-  $string1 = 'About page';
-  $string2 = 'This site is developed using Laravel 10';
-
-  return view('pages.about', ['string1' => $string1, 'string2' => $string2]);
-})->name('hello');
-
-Route::get('/contact', function(){
-  $string1 = 'Contact page';
-  $string2 = 'Thank you for contacting us.';
-
-  return view('pages.contact', compact('string1', 'string2'));
-});
+Route::get('/contact', [PageController::class, 'contactPage']);
 
 // Dynamic routes
 Route::get('/user/{id}', function($id){

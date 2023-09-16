@@ -40,7 +40,7 @@
     <div class="alert alert-success">{{ $name }}</div>
   @endisset
 
-  @switch($type)
+  @switch($name)
       @case(1)
           
           @break
