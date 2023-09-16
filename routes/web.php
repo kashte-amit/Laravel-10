@@ -18,11 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function(){
-  return view('pages.about');
+  $string1 = 'About page';
+  $string2 = 'This site is developed using Laravel 10';
+
+  return view('pages.about', ['string1' => $string1, 'string2' => $string2]);
 })->name('hello');
 
 Route::get('/contact', function(){
-  return view('pages.contact');
+  $string1 = 'Contact page';
+  $string2 = 'Thank you for contacting us.';
+
+  return view('pages.contact', compact('string1', 'string2'));
 });
 
 // Dynamic routes
