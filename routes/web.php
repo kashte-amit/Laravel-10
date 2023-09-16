@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('/home', [PageController::class, 'homePage']);
 Route::get('/about', [PageController::class, 'aboutPage'])->name('hello');
 
 Route::get('/contact', [PageController::class, 'contactPage']);
+
+Route::resource('/blog', BlogController::class);
 
 // Dynamic routes
 Route::get('/user/{id}', function($id){
