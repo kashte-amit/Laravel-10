@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -11,21 +12,8 @@ class LoginController extends Controller
     return view('pages.login');
   }
 
-  public function loginHandler(Request $request)
+  public function loginHandler(LoginRequest $request)
   {
-
-    $request->validate(
-      [
-        'name' => 'required|alpha|min:6',
-        'email' => ['required', 'email'],
-        'password' => ['required', 'email', 'min:8', 'max:12'],
-      ],
-      [
-        'name.required' => 'User name field is mandatory.',
-        'name.alpha' => 'User name must contain letters.',
-      ]
-    );
-
     return $request;
   }
 }
