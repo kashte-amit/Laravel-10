@@ -17,6 +17,38 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('/home', function () {
+  $blogs = [
+    [
+      'title' => 'title one',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'status' => 'A'
+    ],
+    [
+      'title' => 'title two',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'status' => 'D'
+    ],
+    [
+      'title' => 'title three',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'status' => 'A'
+    ],
+    [
+      'title' => 'title four',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'status' => 'D'
+    ],
+    [
+      'title' => 'title five',
+      'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eaque reprehenderit repudiandae eligendi nulla qui quae sapiente totam',
+      'status' => 'A'
+    ]
+  ];
+
+  return view('pages.home', compact('blogs'));
+});
+
 Route::get('/about', function(){
   $string1 = 'About page';
   $string2 = 'This site is developed using Laravel 10';
@@ -37,7 +69,7 @@ Route::get('/user/{id}', function($id){
 })->name('fetch-user');
 
 // Naming routes
-Route::get('/home', function(){
+Route::get('/company', function(){
   return '<a href="'.route('hello').'">About</a>';
 });
 
