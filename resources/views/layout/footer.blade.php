@@ -1,5 +1,5 @@
 <footer class="bg-light text-center text-lg-start"
-style="position: fixed;
+style="
   width: 100%;
   bottom: 0;">
 <!-- Copyright -->

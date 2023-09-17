@@ -8,12 +8,12 @@
   <div class="row mt-4 mb-2">
     
     @foreach ( $blogs as $blog )
-      @if ( $blog['status'] === 'A' )
+      @if ( $blog->status === 1 )
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h2>{{ $blog['title'] }}</h2>
-              <p>{{ $blog['content'] }}</p>
+              <h2>{{ $blog->title }}</h2>
+              <p>{{ $blog->description }}</p>
             </div>
           </div>
         </div>
@@ -21,8 +21,8 @@
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h2>{{ $blog['title'] }}</h2>
-              <p>{{ $blog['content'] }}</p>
+              <h2>{{ $blog->title }}</h2>
+              <p>{{ $blog->description }}</p>
               <div class="btn btn-warning">pending</div>
             </div>
           </div>
